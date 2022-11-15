@@ -76,7 +76,7 @@ class _SettingPageState extends State<SettingPage> {
             buildAccountOption(context, "Change Password"),
             buildAccountOption(context, "Contact Setting"),
             buildAccountOption(context, "Social Media"),
-            buildAccountOption(context, "Langauge"),
+            buildAccountOption(context, "Language"),
             buildAccountOption(context, "Privacy and Security"),
             SizedBox(height: 40),
             Row(
@@ -92,11 +92,11 @@ class _SettingPageState extends State<SettingPage> {
             Divider(height: 20, thickness: 1),
             SizedBox(height: 10),
             buildNotificationOption(
-                "Thame dark", valNotify1, onChangeFunction1),
+                "Theme dark", valNotify1, onChangeFunction1),
             buildNotificationOption(
                 "Account Active", valNotify2, onChangeFunction2),
             buildNotificationOption(
-                "Oppurtunity", valNotify3, onChangeFunction3),
+                "Opportunity", valNotify3, onChangeFunction3),
           ],
         ),
       ),

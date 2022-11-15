@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_import, implementation_imports, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -35,59 +37,72 @@ class _SignInPageState extends State<SignInPage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 100),
                   child: Center(
-                      child: Text("Welcome Back",
-                          style: GoogleFonts.aBeeZee(
-                              fontSize: 40, fontWeight: FontWeight.bold))),
+                    child: Text(
+                      "Welcome Back",
+                      style: GoogleFonts.aBeeZee(
+                          fontSize: 40, fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
                 Center(
-                    child: Text(
-                  "Sign in to continue",
-                  style: GoogleFonts.aBeeZee(
-                      color: Colors.grey,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                )),
+                  child: Text(
+                    "Sign in to continue",
+                    style: GoogleFonts.aBeeZee(
+                        color: Colors.grey,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
                 SizedBox(
                   height: 100,
                 ),
                 TextFormField(
                   decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      labelStyle: const TextStyle(
-                          color: Color.fromARGB(255, 97, 79, 79)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 188, 91, 91))),
-                      label: Text(
-                        "Email ID",
-                        style: GoogleFonts.aBeeZee(),
+                    filled: true,
+                    fillColor: Colors.white,
+                    labelStyle: const TextStyle(
+                      color: Color.fromARGB(255, 97, 79, 79),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(
+                        color: Color.fromARGB(255, 188, 91, 91),
                       ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(22),
-                          borderSide: BorderSide(color: Colors.transparent))),
+                    ),
+                    label: Text(
+                      "Email ID",
+                      style: GoogleFonts.aBeeZee(),
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(22),
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 TextFormField(
                   decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      labelStyle: const TextStyle(
-                          color: Color.fromARGB(255, 97, 79, 79)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 26, 236, 229))),
-                      label: Text(
-                        "Password",
-                        style: GoogleFonts.aBeeZee(),
+                    filled: true,
+                    fillColor: Colors.white,
+                    labelStyle: const TextStyle(
+                      color: Color.fromARGB(255, 97, 79, 79),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(
+                        color: Color.fromARGB(255, 26, 236, 229),
                       ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(22),
-                      )),
+                    ),
+                    label: Text(
+                      "Password",
+                      style: GoogleFonts.aBeeZee(),
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(22),
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -95,62 +110,82 @@ class _SignInPageState extends State<SignInPage> {
                 GestureDetector(
                   onTap: () {},
                   child: Center(
-                      child: Padding(
-                    padding: const EdgeInsets.only(left: 200),
-                    child: Text(
-                      "Forgot Password?",
-                      style: GoogleFonts.aBeeZee(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 200),
+                      child: Text(
+                        "Forgot Password?",
+                        style: GoogleFonts.aBeeZee(
                           fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 105, 103, 103)),
+                          color: Color.fromARGB(255, 105, 103, 103),
+                        ),
+                      ),
                     ),
-                  )),
+                  ),
                 ),
                 SizedBox(height: 20),
                 Container(
-                    height: 55.0,
-                    child: MaterialButton(
-                        onPressed: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => MainPage())),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(80.0)),
-                        padding: EdgeInsets.all(0.0),
-                        child: Ink(
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 95, 95, 218),
-                                  Color.fromARGB(255, 41, 146, 238)
-                                ],
-                                begin: Alignment.centerLeft,
-                                end: Alignment.centerRight,
-                              ),
-                              borderRadius: BorderRadius.circular(20.0)),
-                          child: Container(
-                            constraints: BoxConstraints(
-                                maxWidth: 700.0, minHeight: 50.0),
-                            alignment: Alignment.center,
-                            child: Text(
-                              "Login",
-                              textAlign: TextAlign.center,
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                            ),
-                          ),
-                        ))),
+                  height: 55.0,
+                  child: MaterialButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => MainPage(),
+                      ),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(80.0),
+                    ),
+                    padding: EdgeInsets.all(0.0),
+                    child: Ink(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          // ignore: prefer_const_literals_to_create_immutables
+                          colors: [
+                            Color.fromARGB(255, 95, 95, 218),
+                            Color.fromARGB(255, 41, 146, 238)
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Container(
+                        constraints:
+                            BoxConstraints(maxWidth: 700.0, minHeight: 50.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Login",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 SizedBox(height: 100),
                 GestureDetector(
-                  onTap: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const SignInPage())),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const SignInPage(),
+                    ),
+                  ),
                   child: Center(
                     child: RichText(
-                        text: TextSpan(children: [
-                      TextSpan(
-                          text: "Visit our websites ",
-                          style: GoogleFonts.aBeeZee(color: Colors.black)),
-                      TextSpan(
-                          text: "Click Here",
-                          style: GoogleFonts.aBeeZee(color: Colors.pinkAccent))
-                    ])),
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "Visit our websites ",
+                            style: GoogleFonts.aBeeZee(color: Colors.black),
+                          ),
+                          TextSpan(
+                            text: "Click Here",
+                            style:
+                                GoogleFonts.aBeeZee(color: Colors.pinkAccent),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 )
               ],
