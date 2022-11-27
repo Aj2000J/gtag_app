@@ -15,9 +15,9 @@ class ButtonWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-              shape: StadiumBorder(), onPrimary: Colors.white),
-          child: Text(text),
+              shape: const StadiumBorder(), foregroundColor: Colors.white),
           onPressed: onClicked,
+          child: Text(text),
         ),
       );
 }

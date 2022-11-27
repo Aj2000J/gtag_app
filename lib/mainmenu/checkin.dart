@@ -27,7 +27,11 @@ class _HomePage2AbelState extends State<HomePage2Abel> {
             color: Colors.pink,
           ),
           onPressed: () => Navigator.push(
-              context, MaterialPageRoute(builder: (_) => MainPage())),
+            context,
+            MaterialPageRoute(
+              builder: (_) => const MainPage(),
+            ),
+          ),
         ),
       ),
       body: Column(

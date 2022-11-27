@@ -12,3 +12,4 @@ class User {
       required this.about,
       required this.isDarkMode});
 }
+
