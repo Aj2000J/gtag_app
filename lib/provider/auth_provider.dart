@@ -3,8 +3,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:gtag_app/repository/auth_repo.dart';
-import 'package:gtag_app/response/res_login.dart';
-
+import 'package:gtag_app/response/res_2login.dart';
 import 'package:gtag_app/screen/homepage.dart';
 import 'package:gtag_app/utils/nav_utils.dart';
 import 'package:gtag_app/utils/notifications_utils.dart';
@@ -22,16 +21,16 @@ class AuthProvider extends ChangeNotifier {
 
       ResLogin? res = await _repo.userLogin(email, password);
 
-      if (res!.token != null) {
+      if (res!.status = true) {
         dataLogin = res;
-        log(dataLogin!.token.toString());
+        log(dataLogin!.status.toString());
         isLoading = false;
         notifyListeners();
         NotificationUtils.showSnackbar(context,
             message: "Login Successful", color: Colors.blue);
         Nav.toAll(context, page: HomePage());
       } else {
-        log(res.token.toString());
+        log(res.status.toString());
         isLoading = false;
         notifyListeners();
         NotificationUtils.showSnackbar(context,
@@ -42,21 +41,7 @@ class AuthProvider extends ChangeNotifier {
       isLoading = false;
       notifyListeners();
       NotificationUtils.showSnackbar(context,
-          message: "Unknown Error?", color: Colors.orangeAccent);
-    }
-  }
-
-  Future<void> register(BuildContext context,
-      {required String email, required String password}) async {
-    try {
-      isLoading = true;
-      notifyListeners();
-    } catch (e) {
-      log(e.toString());
-      isLoading = false;
-      notifyListeners();
-      NotificationUtils.showSnackbar(context,
-          message: "Unknown Error?", color: Colors.red);
+          message: "Unknown Error?", color: Colors.deepPurple);
     }
   }
 }

@@ -2,10 +2,11 @@ import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:gtag_app/repository/api.dart';
-import 'package:gtag_app/response/res_login.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+
+import '../response/res_2login.dart';
 
 class AuthRepo {
   Future<ResLogin?> userLogin(String email, String password) async {
